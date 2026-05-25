@@ -1,4 +1,4 @@
-# University Laboratory Assignments (II - V Courses)
+# University Laboratory Assignments (2019 - 2024)
 
 Welcome to my academic repository. This space serves as a structured archive of various laboratory assignments, projects, and practical tasks completed during my university years. It covers fundamental IT disciplines, software engineering concepts, database management, and intelligent systems.
 
@@ -7,7 +7,7 @@ Welcome to my academic repository. This space serves as a structured archive of 
 The repository is organized by academic years/courses and subjects:
 
 ### II Course
-* **`C#/`** — Practical programming assignments using C# (Object-Oriented Programming principles).
+* **`CSharp/`** — Practical programming assignments using C# (Object-Oriented Programming principles).
 * **`Numerical methods/`** — Computational mathematics algorithms.
 
 ### III Course
@@ -30,4 +30,3 @@ The repository is organized by academic years/courses and subjects:
 * **Programming Languages:** Java, C#, Python, C++, JavaScript, SQL
 * **Web Technologies:** HTML5, CSS3
 * **IDEs Used:** IntelliJ IDEA, Visual Studio, Eclipse
-* **Version Control:** Git & GitLab / GitHub
