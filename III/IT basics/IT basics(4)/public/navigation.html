@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Навігація</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script>
+$(function(){
+    $("[data-tooltip]").mousemove(function (eventObject) {
+        $data_tooltip = $(this).attr("data-tooltip");
+        $("#tooltip").html($data_tooltip)
+            .css({ 
+              "top" : eventObject.pageY + 5,
+              "left" : eventObject.pageX + 5
+            })
+            .show();
+        }).mouseout(function () {
+          $("#tooltip").hide()
+            .html("")
+            .css({
+                "top" : 0,
+                "left" : 0
+            });
+    });
+});
+</script>
+</head>
+<body class="bodycolor">
+<div id="tooltip" > 
+
+<a href="main.html" target="content">Головна</a>
+
+</div>
+<div >
+<p  data-tooltip="Автор сайту: Мироненко А.О.">
+<a href="main.html" target="content">Головна</a>
+</div>
+</p>
+<p>
+<a href="descriptionPhone.html" target="content">Опис телефона</a>
+<ul>
+<li><a href="characteristicsPhone.html" target="content">Характеристика телефона</a></li>
+</ul>
+<a href="descriptionTablet.html" target="content">Опис планшету</a>
+<ul>
+<li><a href="characteristicsTablet.html" target="content">Характеристика планшету</a></li>
+</ul>
+<a href="form.html" target="content">Зробити замовлення</a>
+<p>
+<a href="availability.html" target="content">Наявність</a>
+<p>
+
+<a href="reviews.html" target="_blank" >Відгуки</a>
+<p>
+<a href="form2.html" target="content">Реєстрація нового користувача</a>
+<p>
+<a href="Clock.html" target="content">Електронний годинник</a>
+<p>
+<a href="tableorder.html" target="content">Вибрати товар для замовлення</a>
+<p>
+<a href="statistic.html" target="content">Статистика</a>
+</body>
+</html>

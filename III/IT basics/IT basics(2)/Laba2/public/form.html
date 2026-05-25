@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Форма для замовлень</title>
+<script>
+function check()
+{
+  var txt=document.getElementsByTagName("input");
+  var count = 0;
+  for (var i=0; i<txt.length; i++)
+	    if ((txt[i].type=="text")&& (txt[i].value==""))
+	    count++;
+  if (count==0) alert("Дякуємо, що заповнили всі обов'язкові поля!");
+  else alert("Форма містить "+count+" незаповнених обов'язкових полів!");
+}
+
+</script>
+</head>
+<body bgcolor="MistyRose">
+
+<form action="" >
+<ul>
+    
+<li><label for="surname">Прізвище:
+<p>
+<input type="text" id="surname" name="Прізвище">  
+</label>
+</li>
+
+         
+<li><label for="name">Ім'я:
+<p>
+<input type="text" id="name" name="Ім'я">
+</label>
+</li>
+
+         
+<li><label for="father">По батькові:
+<p>
+<input type="text" id="father" name="По батькові">
+</label>
+</li>
+
+<li><label for="number">Номер телефону:
+<p>
+<input type="tel" id="number" name="Номер телефону">
+</label>
+</li>
+
+<li><label for="email">Електронна адреса:
+<p>
+<input type="email" id="email" name="Електронна адреса">
+</label>
+</li>
+
+<p>
+<li>Виберіть товар:</li>
+<select multiple="multiple">
+<p>
+  <option>Apple iPhone 11</option>
+  <option>Apple iPhone 13 Pro Max</option>
+  <option>Apple iPhone 13</option>
+  <option>Apple iPhone 12</option>
+  <option>Планшет Apple iPad Pro 12</option>
+  <option>Планшет Apple iPad 10</option>
+  <option>Планшет Apple iPad Pro 11</option>
+  <option>Планшет Apple iPad  12</option>
+  <p>
+</select>
+
+<li>Вберіть місто доставки:</li>
+<p>
+
+<input type="radio" id="contactChoice1"
+     name="contact" value="Dnipro">
+    <label for="contactChoice1">Дніпро</label>
+
+    <input type="radio" id="contactChoice2"
+     name="contact" value="Kyiv">
+    <label for="contactChoice2">Київ</label>
+
+    <input type="radio" id="contactChoice3"
+     name="contact" value="Kharkov">
+    <label for="contactChoice3">Харків</label>
+
+<li>Зателефонувати вам для підтвердження інформації?</li>
+<input type="checkbox" id="contactChoice1"
+     name="contact" value="yes">
+    <label for="contactChoice1"></label>
+    
+
+<li><label for="msg">Коментарі:
+<p>
+<<textarea id="msg" name="comment" rows="5" cols="50"></textarea>
+</label>
+</li>
+
+</ul>
+
+<input type="submit" name="Button1" value="Надіслати">
+<input type="reset" name="Button2" value="Очистити">
+<input type="button" name="Button3" value="Перевірка" onclick="check()">
+</form>
+</body>
+</html>

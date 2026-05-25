@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Головна</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+	$('.content_toggle').click(function(){
+		$('.content_block').slideToggle(300);      
+		return false;
+	});
+});
+</script>
+</head>
+<body >
+<h2 >Ми раді вітати вас на сайті нашого магазину!</h2>
+<div class="main">
+Наша компанія займається продажом техніки ще з 2010 року. За цей час ми стали лідерами у своїй сфері.
+Ми дуже старанно підбераємо товар для вас за всіма критеріями якості, саме тому із 100 заказів було повернуто лише 1!
+ Що ви можете знайти у нас на сайті?
+<ul>
+<li>телефони компанії Apple</li>
+<li>планшети компанії Apple</li>
+</ul>
+
+<button  class="content_toggle" >Показати більше інформації</button>
+ 
+<div class="content_block" style="display: none;">
+	
+
+
+Чому саме ми?
+<ul>
+<li>перевірена якість</li>
+<li>лідери ринку</li>
+<li>доброзичливий персонал</li>
+<li>гарантії</li>
+<li>приємна ціна</li>
+<li>безкоштовна доставка</li>
+<li>цілодобова консультація</li>
+<li>великі знижки</li>
+</ul>
+
+
+Ми дуже вдячні вам, за ваш вибір. Ми будемо надалі намагатися робити для вас все краще і краще!
+</div>
+</div>
+<div class="avtor">
+&copy;Мироненко А.О. 
+</div>
+</body >
+</html>

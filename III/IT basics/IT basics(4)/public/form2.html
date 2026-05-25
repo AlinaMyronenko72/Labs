@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Реєстрація нового кристувача</title>
+<script>
+function check()
+{
+  var txt=document.getElementsByTagName("input");
+  var count = 0;
+  for (var i=0; i<txt.length; i++)
+	    if ((txt[i].type=="text")&& (txt[i].value==""))
+	    count++;
+  if (count==0) alert("Дякуємо, що заповнили всі обов'язкові поля!");
+  else alert("Форма містить "+count+" незаповнених обов'язкових полів!");
+}
+</script>
+<script>
+function text(x)
+{
+  const y=/^[A-ZА-ЯЁІ]+$/i.test(x.value);
+  return y;
+}
+function tel(x)
+{
+  const y=/^[+0-9]+$/i.test(x.value);
+  return y;
+}
+</script>
+<script>
+function validation()
+{
+	var mywindow;
+	var flag=true;
+	
+  var validation=document.getElementById("surname");
+  if(!text(validation))
+	  {
+	  flag=false
+	  mywindow=window.open(" ","error"," ");
+		 
+	  mywindow.document.writeln("Прізвище = "+validation.value);
+	
+	  }
+  
+  validation=document.getElementById("name");
+  if(!text(validation))
+	  {
+	  if(flag)
+		  {
+	  mywindow=window.open(" ","error"," ");
+		  }
+	  mywindow.document.writeln("Ім'я = "+validation.value);
+	  flag=false
+	  }
+  
+  validation=document.getElementById("father");
+  if(!text(validation))
+	  {
+	  if(flag)
+	  {
+	  mywindow=window.open(" ","error"," ");
+	  }
+	  mywindow.document.writeln("По батькові = "+validation.value);
+	  flag=false
+	  }
+  validation=document.getElementById("number");
+  if(!tel(validation))
+	  {
+	  if(flag)
+	  {
+	  mywindow=window.open(" ","error"," ");
+	  }
+	  mywindow.document.writeln("Телефон = "+validation.value);
+	  flag=false
+	  }
+  if(flag)
+	  {
+	  mywindow=window.open(" ","error"," ");
+	  mywindow.document.writeln("Дякуємо, що правильно заповнили всі поля!");
+	  }
+	  
+  //return flag;
+}
+</script>
+</head>
+<body >
+<h2 >Реєстрація нового користувача</h2>
+<form onsubmit="return validation()">
+<ul>
+    
+<li><label for="surname">Прізвище:
+<p>
+<input type="text" id="surname" name="Прізвище">  
+</label>
+</li>
+
+         
+<li><label for="name">Ім'я:
+<p>
+<input type="text" id="name" name="Ім'я">
+</label>
+</li>
+
+         
+<li><label for="father">По батькові:
+<p>
+<input type="text" id="father" name="По батькові">
+</label>
+</li>
+
+<li><label for="number">Номер телефону:
+<p>
+<input type="tel" id="number" name="Номер телефону">
+</label>
+</li>
+
+<li><label for="email">Електронна адреса:
+<p>
+<input type="email" id="email" name="Електронна адреса">
+</label>
+</li>
+
+<li><label for="password">Пароль:
+<p>
+<input type="password" id="password" name="Пароль:">
+</label>
+</li>
+
+
+</ul>
+
+<input type="submit" name="Button1" value="Надіслати">
+<input type="reset" name="Button2" value="Очистити">
+<input type="button" name="Button3" value="Перевірка" onclick="check()">
+</form>
+<div class="avtor">
+&copy;Мироненко А.О. 
+</div>
+</body>
+</html>

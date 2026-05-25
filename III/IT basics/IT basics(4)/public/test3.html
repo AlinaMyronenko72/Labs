@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+	$('.content_toggle').click(function(){
+		$('.content_block').slideToggle(300);      
+		return false;
+	});
+});
+</script>
+<body>
+<button class="content_toggle" >Показать текст</button>
+ 
+<div class="content_block" style="display: none;">
+	<p>Блок скрытого текста...</p>
+</div>
+
+</body>
+</html>

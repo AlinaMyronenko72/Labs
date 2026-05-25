@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Статистика</title>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+ google.charts.load('current', {'packages':['corechart'], 'language':'ua'});
+ google.charts.setOnLoadCallback(drawChart);
+ function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+      ['Місяць', 'Кількість відвідувачів'],
+      ['1.04', 17],
+      ['2.04', 7],
+      ['3.04', 27],
+      ['4.04', 15],
+      ['5.04', 12],
+      ['6.04', 13],
+      ['7.04', 6],
+      ['8.04', 29],
+      ['9.04', 15],
+      ['10.04', 5],
+      ['11.04', 22],
+      ['12.04', 26],
+      ['13.04', 22],
+      ['14.04', 26],
+      ['15.04', 10],
+      ['16.04', 23],
+      ['17.04', 28],
+      ['18.04', 13],
+      ['19.04', 17],
+      ['20.04', 26],
+      ['21.04', 24],
+      ['22.04', 15],
+      ['23.04', 4],
+      ['24.04', 7],
+      ['25.04', 29],
+      ['26.04', 2],
+      ['27.04', 14],
+      ['28.04', 29],
+      ['29.04', 6],
+      ['30.04', 2]
+      ]);
+
+ var options = {
+ title: 'Кількість відвідувачів за минулий місяць',
+ curveType: 'function',
+ legend: { position: 'bottom' }
+ };
+ var chart = new google.visualization.ColumnChart(document.getElementById('l_chart'));
+
+ chart.draw(data, options);
+ }
+ google.charts.setOnLoadCallback(drawChart2);
+ function drawChart2() {
+  var data2 = google.visualization.arrayToDataTable([
+      ['Країна', 'Кількість відвідувачів'],
+      ['Франція', 5.56],
+      ['Польща', 20.37],
+      ['Україна', 25.93],
+      ['Великобританія', 1.85],
+      ['Китай', 7.41],
+      ['Румунія', 22.22],
+      ['Словакія', 16.67]
+      ]);
+
+ var options2 = {
+ title: 'Кількість відвідувачів за минулий місяць',
+ curveType: 'function',
+ legend: { position: 'bottom' }
+ };
+ var chart2 = new google.visualization.PieChart(document.getElementById('l_chart2'));
+
+ chart2.draw(data2, options2);
+ }
+ </script>
+
+</head>
+
+<body>
+<h2>Статистика</h2>
+<div id="l_chart" style="width: 900px; height: 500px; margin: 0 auto;"></div>
+<div id="l_chart2" style="width: 900px; height: 500px; margin: 0 auto;"></div>
+<b>
+<p align="center">
+Графік зміни обсягів продажу товарів за попередній місяць 
+</b>
+<canvas align="center" id = "image_1" width = "600px" height = "600px" style = "border:solid 2px black"></canvas>
+
+<script>
+var g = image_1.getContext('2d');
+g.lineWidth = 3;
+g.strokeStyle = 'black';
+
+
+
+g.moveTo(30,30);
+g.lineTo(30,500);
+g.moveTo(30,500);
+g.lineTo(500,500);
+
+g.stroke();
+
+var g1 = image_1.getContext('2d');
+g1.lineWidth = 1;
+g1.strokeStyle = 'black';
+g1.moveTo(30,80);
+g1.lineTo(45,170);
+g1.lineTo(60,110);
+g1.lineTo(75,210);
+g1.lineTo(90,140);
+g1.lineTo(105,190);
+g1.lineTo(120,430);
+g1.lineTo(135,160);
+g1.lineTo(150,60);
+g1.lineTo(165,50);
+g1.lineTo(180,130);
+g1.lineTo(195,190);
+g1.lineTo(210,450);
+g1.lineTo(225,80);
+g1.lineTo(240,180);
+g1.lineTo(255,160);
+g1.lineTo(270,210);
+g1.lineTo(285,170);
+g1.lineTo(300,120);
+g1.lineTo(315,70);
+g1.lineTo(330,190);
+g1.lineTo(345,30);
+g1.lineTo(360,450);
+g1.lineTo(375,190);
+g1.lineTo(390,420);
+g1.lineTo(405,130);
+g1.lineTo(420,30);
+g1.lineTo(435,460);
+g1.lineTo(450,360);
+g1.lineTo(465,490);
+g1.stroke();
+for(let i = 0; i < 6; i++) { 
+    g.fillText((6 - i) * 8 , 4, i * 80 + 60); 
+    
+    g.stroke(); 
+}
+let labels = ["1", "2", "3.", "4.", "5","6","7","7","8","9","10","11",
+	  "12","13","14","15","16","17","18","19","20","21","22","23","24","25",
+	  "26","27","28","29","30"]; 
+//Выводим меток
+for(var i=0; i<31; i++) { 
+ g.fillText(labels[i],  30+i*15, 520); 
+}
+
+</script>
+</body>
+</html>

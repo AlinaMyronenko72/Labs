@@ -1,0 +1,172 @@
+@charset "UTF-8";
+h1{
+    color: rgb(117, 0, 58);
+    font-family: system-ui;
+    text-align: center;
+
+}
+h2,h3{
+    color: rgb(117, 0, 58);
+    font-family: system-ui;
+    font-weight: lighter;
+    text-align: center;
+}
+p
+{
+	color:rgb(26, 43, 43);
+	font-family: "Times New Roman";
+}
+.bodycolor{
+	background: MistyRose; 
+}
+
+.main {
+	
+    padding: 20px 40px; 
+    background: MistyRose; 
+    border: 2px dashed MistyRose;
+    border-radius: 10px; 
+    box-shadow: 0 0 0 4px rgb(117, 0, 58), 2px 1px 6px 4px rgba(150, 128, 137, 0.5); 
+    color: black;
+    margin-right: 20%; 
+    margin-left: 20%; 
+}
+.main2 {
+	
+    padding: 20px 40px; 
+    background: MistyRose; 
+    border: 2px dashed MistyRose;
+    border-radius: 10px; 
+    box-shadow: 0 0 0 4px rgb(117, 0, 58), 2px 1px 6px 4px rgba(150, 128, 137, 0.5); 
+    color: black;
+    margin-right: 10%; 
+    margin-left: 50%; 
+}
+.avtor
+{
+	color:  rgb(51, 0, 26);
+	text-align: right;
+}
+.leftimg {
+    float:left; 
+    margin: 7px 7px 7px 0; 
+   }
+   .leftimg2 {
+    float:left; 
+    margin: 30px 30px 7px 0; 
+   }
+table {
+    border: 3px solid rgb(117, 0, 58); /* Рамка вокруг таблицы */
+    background:rgb(117, 0, 58);
+    margin: auto;
+}
+.tr {
+    background:  MistyRose; /* Цвет фона */
+}
+.tr2 {
+    background:  white; /* Цвет фона */
+}
+.tr3 {
+    background: rgb(117, 0, 58) ;
+    color: white;
+}
+a:link
+{
+  color: black;
+}
+a:visited
+{
+  color:  rgb(117, 0, 58);
+}
+a:hover
+{
+  color:white;
+}
+a:active
+{
+  color: white;
+}
+#sidebar, #content { position: absolute; } 
+   #sidebar, #content { overflow: auto; padding: 10px; }
+#sidebar { 
+    width: 150px; background: MistyRose; border-right: 1px solid rgb(117, 0, 58);
+    top: 0; /* Расстояние от верхнего края */ 
+    bottom: 0; /* Расстояние снизу  */
+   }
+#content {
+    top: 0; /* Расстояние от верхнего края */
+    left: 200px; /* Расстояние от левого края */ 
+    bottom: 0; right: 0;
+   }
+ span{
+ color: rgb(117, 0, 58);
+ font-weight:bold;
+ font-size: 20pt;
+ }
+ #clock{
+  color: #000;
+  font-weight: lighter;
+  font-size: 30px;
+  text-align: center;
+  color: rgb(117, 0, 58);
+}
+.block {
+    display: inline-block; /* Строчно-блочный элемент */
+    position: relative; /* Относительное позиционирование */
+}
+   .block:hover::after {
+    content: attr(data-title); /* Выводим текст */
+    position: absolute; /* Абсолютное позиционирование */
+    left: 120%; top: -20%; /* Положение подсказки */
+    z-index: 1; /* Отображаем подсказку поверх других элементов */
+    background: rgba(255,255,230,0.9); /* Полупрозрачный цвет фона */
+   
+      border: 2px solid  rgb(117, 0, 58);
+     border-radius: 10px; 
+    padding: 10px 15px; /* Поля */
+   }
+button {
+    background-color: rgb(117, 0, 58);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    margin: 0 auto;
+   
+  display: block;
+}
+#tooltip {
+  z-index: 9999;
+  position: absolute;
+  display: none;
+  top:0px;
+  left:0px;
+  width: 100px;
+  height: 60px;
+  background: white;
+  box-shadow: 0 -200px 100px -120px rgb(255, 0, 128) inset;
+  border-radius: 20px;
+  border: 2px solid  rgb(117, 0, 58);
+  animation: background 4s infinite alternate;
+  color:white;
+  text-align: center;
+   
+    
+}
+@keyframes background {
+  50% {
+    background: darkviolet;
+    box-shadow: 0 -140px 70px -120px mediumorchid inset,
+                0 -210px 70px -120px rgb(64, 0, 128) inset,
+                0 -280px 70px -120px plum inset;
+  }
+}
+canvas {
+   display: block;
+   margin: 0 auto;
+}

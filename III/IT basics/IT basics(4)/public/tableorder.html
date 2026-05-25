@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
+<title>Що бажаете замовити?</title>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+</head>
+<style>
+table {
+width: 50%; /* указываем ширину элемента в процентах от ширины области просмотра */
+background-color:white;
+}
+th, td {
+text-align: left; /* горизонтальное выравнивание текста по левому краю */
+border: 1px solid  rgb(117, 0, 58); /* сплошная граница размером 1 пиксель оранжевого цвета */
+
+}
+tr:hover {
+background-color: MistyRose; /* устанавливаем цвет заднего фона */
+}
+</style>
+<body>
+<h2>Що бажаете замовити?</h2>
+<table  id="MyTable">
+
+<script>
+
+function doSendToServer() {
+	
+    var z="";      
+    var pch    = $ ("#MyTable").find("input:checkbox");  // выбрать в таблице все input:checkbox
+    var ptr  = $ ("#MyTable").find ("tr").find("td");
+    var i=pch.length;
+    for(var ii=0;ii<i;ii++)
+     if (pch[ii].checked) {                                                                     // проверяем установку
+              // здесь можно  обработать  отмеченные строки  
+        z=z+ptr[ii*4+0].innerHTML+" "+ptr[ii*4+1].innerHTML+" "+ptr[ii*4+2].innerHTML+"<br/>";  // формируем строку
+   }
+   
+var newWnd;
+    newWnd = window.open(" ","error"," ");
+    newWnd.document.writeln(z+"<br/>" );
+   
+  
+}
+
+function ab(x_) {
+    var m= document.all.mych;                                                  // получить все элементы с именем  mych
+    var i=m.length;
+    var m1 = document.getElementById("MyTable");            // Получить ссылку на таблицу
+    var p= m1.getElementsByTagName("tr");                 // для  таблицы получить массив строк
+     for(var ii=0;ii<i;ii++)
+          { if(x_== m[ii])                                                               // найти в массиве
+              {  
+                if (x_.checked)     p[ii+1].bgColor='MistyRose';
+                            else    p[ii+1].bgColor='white';
+               }
+         }
+   
+    }
+
+var data_table=[           [ 'Товар', 'Колір',    'Ціна','Відмітка'],
+	 ['Apple iPhone 11','Чорний','25 000'      ],
+     ['Apple iPhone 13 Pro Max','Сірий', '50 000'],
+     ['Apple iPhone 13','Блакитний','45 000'  ],
+     ['Apple iPhone 12','Червоний','42 000'  ],
+['Планшет Apple iPad Pro 12','Фіолетовий','43 000'  ],
+['Планшет Apple iPad 10','Чорний','23 000'  ],
+['Планшет Apple iPad Pro 11','Блакитний','30 000'  ],
+['Планшет Apple iPad  12','Сірий','35 000'  ]
+                           ];
+/// Эту часть выполнять  при разборе  файла
+document.write("<tr class='tr3' id='Mytr'><th>"+
+                            data_table[0][0]+"</th><th >"
+                          +data_table[0][1]+"</th><th>"
+                          +data_table[0][2]+"</th><th>"
+                          +data_table[0][3]+"</th></tr>");
+for(var i=1;i<data_table.length;i++)
+{
+document.write("<tr id='Mytr'  ><td>" +data_table[i][0]+"</td><td>"
+                                      +data_table[i][1]+"</td><td>"
+                                      +data_table[i][2]+"</td><td><input type='checkbox' id='che' name='mych' onclick=ab(this)></td></tr>");
+
+}
+
+
+	   
+	   
+	   
+
+
+  </script>
+</table>
+<form onsubmit="return a()">
+<p>
+<button type="button" name="select" onclick="doSendToServer();">Передати</button>
+
+
+
+</form>
+</body>
+</html>
