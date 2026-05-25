@@ -1,0 +1,4 @@
+Name:Dress, Price:2000, Material:Cotton, Contry:Turkey,Skirt:Mini
+Name:Glasses, Price:200000,Brand:Dolce and Gabbana, Color:Blue, Rim:Cat eye
+Name:Santa Clause suit, Price:4000, Material:Velour, Contry:Ukraine,Celebration:Christmas 
+Name:Ring, Price:500,Brand:Piligrim, Color:Silver, Number of rhinestones:56
