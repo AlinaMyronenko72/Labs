@@ -11,7 +11,7 @@ int main()
 	cout << "b:";
 	cin >> b;
 //	y = x * x * x + 2 * x * x - 11;
-	cout << "Ìåòîä õîğä" << endl;
+	cout << "ĞœĞµÑ‚Ğ¾Ğ´ Ñ…Ğ¾Ñ€Ğ´" << endl;
 	double aa = a * a * a + 2 * a * a - 11;
 
 

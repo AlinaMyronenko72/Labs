@@ -98,7 +98,7 @@ int main()
 	}
 	cout << x1 << endl;
 	cout << y1 << endl;
-	cout << "Ïğîñòûõ èòåğàöèé" << endl;
+	cout << "ĞŸÑ€Ğ¾ÑÑ‚Ñ‹Ñ… Ğ¸Ñ‚ĞµÑ€Ğ°Ñ†Ğ¸Ğ¹" << endl;
 	SimpleIter(e);
 	
 	return 0;

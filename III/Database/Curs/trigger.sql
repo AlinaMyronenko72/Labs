@@ -13,7 +13,7 @@ set @phone=(select Phone from inserted)
 if exists(select * from Client where (Fam=@fam and Iniz=@iniz and DateBirth=@datebirth and Phone=@phone)
 having count(*)>1)
 begin
-	raiserror ('Такой клиент уже существует!',16,10)
+	raiserror ('РўР°РєРѕР№ РєР»РёРµРЅС‚ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚!',16,10)
 	rollback transaction
 end
 
@@ -21,7 +21,7 @@ create trigger trr2
 on Client
 after delete
 as
-raiserror('Вы удалили клиента из базы данных!',16,10)
+raiserror('Р’С‹ СѓРґР°Р»РёР»Рё РєР»РёРµРЅС‚Р° РёР· Р±Р°Р·С‹ РґР°РЅРЅС‹С…!',16,10)
 go
 
 
@@ -34,7 +34,7 @@ declare @db date,@db1 date='2006-01-01'
 set @db=(select DateBirth from inserted)
 if @db>@db1
 begin
-	raiserror ('Клиент, которому нет 16 лет, не может быть внесен в базу данных!',16,10)
+	raiserror ('РљР»РёРµРЅС‚, РєРѕС‚РѕСЂРѕРјСѓ РЅРµС‚ 16 Р»РµС‚, РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РІРЅРµСЃРµРЅ РІ Р±Р°Р·Сѓ РґР°РЅРЅС‹С…!',16,10)
 	rollback transaction
 end
 

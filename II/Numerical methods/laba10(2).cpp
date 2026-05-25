@@ -20,7 +20,7 @@ int main()
 	cout << "b:";
 	cin >> b;
 	double h = (b - a) / n;
-	cout << "İéëåğ" << endl;
+	cout << "Ğ­Ğ¹Ğ»ĞµÑ€" << endl;
 	x[0] = 0;
 	y[0] = 1;
 	z[0] = 1;

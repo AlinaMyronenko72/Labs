@@ -32,7 +32,7 @@ double f1(double x)
 //}
 void Three (double x[],double y[], int M,double h)
 {
-	cout << "Ïî 3 óçëàì:"<<endl;
+	cout << "ÐŸÐ¾ 3 ÑƒÐ·Ð»Ð°Ð¼:"<<endl;
 	
 	double Y[50];
 	
@@ -50,7 +50,7 @@ void Three (double x[],double y[], int M,double h)
 }
 void Four(double x[], double y[], int M, double h)
 {
-	cout << "Ïî 4 óçëàì:"<<endl;
+	cout << "ÐŸÐ¾ 4 ÑƒÐ·Ð»Ð°Ð¼:"<<endl;
 
 	double Y[50];
 	Y[0] = 1.0 / (6.0 * h) * (-11 * y[0] + 18 * y[1] - 9*y[2]+2*y[3]);
@@ -70,7 +70,7 @@ void Four(double x[], double y[], int M, double h)
 }
 void Five (double x[], double y[], int M, double h)
 {
-	cout << "Ïî 5 óçëàì:" << endl;
+	cout << "ÐŸÐ¾ 5 ÑƒÐ·Ð»Ð°Ð¼:" << endl;
 
 	double Y[50];
 	Y[0] = 1.0 / (12.0 * h) * (-25 * y[0] + 48 * y[1] - 36 * y[2] + 16 * y[3]-3*y[4]);
@@ -89,7 +89,7 @@ void Five (double x[], double y[], int M, double h)
 }
 void Apro(double x[50], double y[50], int M, double h)
 {
-	cout << "Àïðîêñèìàöèÿ:" << endl;
+	cout << "ÐÐ¿Ñ€Ð¾ÐºÑÐ¸Ð¼Ð°Ñ†Ð¸Ñ:" << endl;
 
 	double Y[50];
 	Y[0]= 1.0 / (70.0 * h) * (-54 * y[0] + 13 * y[1] + 40 * y[2] + 27 * y[3] - 26 * y[4]);
@@ -132,7 +132,7 @@ int main()
 	
 	}
 
-	//cout << "Àíàëèòè÷åñêè:"<<endl;
+	//cout << "ÐÐ½Ð°Ð»Ð¸Ñ‚Ð¸Ñ‡ÐµÑÐºÐ¸:"<<endl;
 
 	/*cout << f1(x[0]) << endl;;
 	for (int i = 1; i <=31; i++)

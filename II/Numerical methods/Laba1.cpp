@@ -12,7 +12,7 @@ int main()
 	double p[5] = { 0.9,2.7,4.5,6.3,0 };
 	double sum1 = 0;
 	double b = 7.2;
-	cout << "Ëàãðàíæ:" << endl;
+	cout << "Ð›Ð°Ð³Ñ€Ð°Ð½Ð¶:" << endl;
 	for (int h = 0; h < 5; h++)
 	{
 		if ((p[h] > b) || (p[h] < x[0]))
@@ -37,7 +37,7 @@ int main()
 		}
 		cout << sum1 << endl;
 	}
-	cout << "Íüþòîí:" << endl;
+	cout << "ÐÑŒÑŽÑ‚Ð¾Ð½:" << endl;
 	for (int k = 0; k < 5; k++) {
 
 		double h, q;
@@ -113,7 +113,7 @@ int main()
 
 		cout << pn << endl;
 	}
-	cout << "Ãàóññ:" << endl;
+	cout << "Ð“Ð°ÑƒÑÑ:" << endl;
 	for (int k = 0; k < 5; k++) {
 		double h, q;
 		h = (x[4] - x[0]) / 4;

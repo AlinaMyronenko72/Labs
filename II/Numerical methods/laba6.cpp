@@ -40,7 +40,7 @@ double Dihot (double a,double b,double c,double e)
 		}
 			k++;
 	} while (abs(a - b) > e);
-	cout << "Êîëè÷åñòâî èòåğàöèé:" << k << endl;
+	cout << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ¸Ñ‚ĞµÑ€Ğ°Ñ†Ğ¸Ğ¹:" << k << endl;
 	return c;
 }
 double Hord (double a, double b, double c, double e)
@@ -89,7 +89,7 @@ double Kasat(double a, double b, double e)
 		x = x0 - f(x0) / f1(x0);
 		k++;
 	} 
-	cout << "Êîëè÷åñòâî èòåğàöèé:" << k << endl;
+	cout << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ¸Ñ‚ĞµÑ€Ğ°Ñ†Ğ¸Ğ¹:" << k << endl;
 	return x;
 }
 double Combain(double a, double b, double c, double e)
@@ -122,7 +122,7 @@ double Combain(double a, double b, double c, double e)
 	}
 	
 	c =( a1 + b1) / 2.0;
-	cout << "Êîëè÷åñòâî èòåğàöèé:" << k << endl;
+	cout << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ¸Ñ‚ĞµÑ€Ğ°Ñ†Ğ¸Ğ¹:" << k << endl;
 		return c;
 }
 double Iter(double a, double b, double x, double L, double e)
@@ -135,7 +135,7 @@ double Iter(double a, double b, double x, double L, double e)
 		k++;
 	} while (abs(x1 - x) >= e);
 	
-	cout << "Êîëè÷åñòâî èòåğàöèé:" << k << endl;
+	cout << "ĞšĞ¾Ğ»Ğ¸Ñ‡ĞµÑÑ‚Ğ²Ğ¾ Ğ¸Ñ‚ĞµÑ€Ğ°Ñ†Ğ¸Ğ¹:" << k << endl;
 		return x;
 
 }
@@ -153,19 +153,19 @@ int main()
 	cin >> a;
 	cout << "b:";
 	cin >> b;
-	cout << "Ìåòîä õîğä" << endl;
+	cout << "ĞœĞµÑ‚Ğ¾Ğ´ Ñ…Ğ¾Ñ€Ğ´" << endl;
 	cout << Hord(a, b, c, e) << endl;
 	cout << "a1:";
 	cin >> a1;
 	cout << "b1:";
 	cin >> b1;
-	cout << "Ìåòîä õîğä" << endl;
+	cout << "ĞœĞµÑ‚Ğ¾Ğ´ Ñ…Ğ¾Ñ€Ğ´" << endl;
 	cout << Hord(a1, b1, c, e) << endl;
 	cout << "a2:";
 	cin >> a2;
 	cout << "b2:";
 	cin >> b2;
-	cout << "Ìåòîä õîğä" << endl;
+	cout << "ĞœĞµÑ‚Ğ¾Ğ´ Ñ…Ğ¾Ñ€Ğ´" << endl;
 	cout << Hord(a2, b2, c, e) << endl;
 	for (int i = a; i <= b; i++) {
 		double f = f1(i);
@@ -179,15 +179,15 @@ int main()
 	cout << "Max: " << max << endl;
 	double L = -2 / (min +max);
 	cout << L << endl;
-	cout << "Ìåòîä Äèõîòîìèè" << endl;
+	cout << "ĞœĞµÑ‚Ğ¾Ğ´ Ğ”Ğ¸Ñ…Ğ¾Ñ‚Ğ¾Ğ¼Ğ¸Ğ¸" << endl;
 	cout << Dihot(a, b, c, e) << endl;
-	cout << "Ìåòîä õîğä" << endl;
+	cout << "ĞœĞµÑ‚Ğ¾Ğ´ Ñ…Ğ¾Ñ€Ğ´" << endl;
 	cout << Hord(a, b, c, e) << endl;
-	cout << "Ìåòîä Êàñàòåëüíûõ" << endl;
+	cout << "ĞœĞµÑ‚Ğ¾Ğ´ ĞšĞ°ÑĞ°Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ñ…" << endl;
 	cout <<Kasat(a, b, e) << endl;
-	cout << "Êîìáèíèğîâàíûé ìåòîä" << endl;
+	cout << "ĞšĞ¾Ğ¼Ğ±Ğ¸Ğ½Ğ¸Ñ€Ğ¾Ğ²Ğ°Ğ½Ñ‹Ğ¹ Ğ¼ĞµÑ‚Ğ¾Ğ´" << endl;
 	cout << Combain(a, b, c, e) << endl;
-	cout << "Ìåòîä ïğîñòûõ èòåğàöèé" << endl;
+	cout << "ĞœĞµÑ‚Ğ¾Ğ´ Ğ¿Ñ€Ğ¾ÑÑ‚Ñ‹Ñ… Ğ¸Ñ‚ĞµÑ€Ğ°Ñ†Ğ¸Ğ¹" << endl;
 	cout << Iter(a,b,c,L,e) << endl;
 	cout<<"g(x)=x+"<<L<<"(x*x*x+2*x-11)";
 	return 0;

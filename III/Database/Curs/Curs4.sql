@@ -19,15 +19,15 @@ create table Client
 	Phone nvarchar(13) not null
 )
 go
-insert into Client(Fam,Iniz,DateBirth,Phone) values('Иванов','В.П','1993-02-16','+380662536727')
-insert into Client(Fam,Iniz,DateBirth,Phone) values('Шептько','К.П','1995-04-23','+380955986106')
-insert into Client(Fam,Iniz,DateBirth,Phone) values('Кирнева','А.М','1985-11-04','+380935609543')
-insert into Client(Fam,Iniz,DateBirth,Phone) values('Олипова','Ю.Д','1967-07-07','+380996499988')
-insert into Client(Fam,Iniz,DateBirth,Phone) values('Корнев','В.М','1956-01-01','+380673357611')
-insert into Client(Fam,Iniz,DateBirth,Phone) values('Аликова','А.А','2000-12-17','+380666555456')
-insert into Client(Fam,Iniz,DateBirth,Phone) values('Мечников','Д.А','1990-06-10','+380951666489')
-insert into Client(Fam,Iniz,DateBirth,Phone) values('Цепков','К.Е','2001-03-24','+380965334788')
-insert into Client(Fam,Iniz,DateBirth,Phone) values('Ульникова','М.Р','1979-09-27','+380971213245')
+insert into Client(Fam,Iniz,DateBirth,Phone) values('РРІР°РЅРѕРІ','Р’.Рџ','1993-02-16','+380662536727')
+insert into Client(Fam,Iniz,DateBirth,Phone) values('РЁРµРїС‚СЊРєРѕ','Рљ.Рџ','1995-04-23','+380955986106')
+insert into Client(Fam,Iniz,DateBirth,Phone) values('РљРёСЂРЅРµРІР°','Рђ.Рњ','1985-11-04','+380935609543')
+insert into Client(Fam,Iniz,DateBirth,Phone) values('РћР»РёРїРѕРІР°','Р®.Р”','1967-07-07','+380996499988')
+insert into Client(Fam,Iniz,DateBirth,Phone) values('РљРѕСЂРЅРµРІ','Р’.Рњ','1956-01-01','+380673357611')
+insert into Client(Fam,Iniz,DateBirth,Phone) values('РђР»РёРєРѕРІР°','Рђ.Рђ','2000-12-17','+380666555456')
+insert into Client(Fam,Iniz,DateBirth,Phone) values('РњРµС‡РЅРёРєРѕРІ','Р”.Рђ','1990-06-10','+380951666489')
+insert into Client(Fam,Iniz,DateBirth,Phone) values('Р¦РµРїРєРѕРІ','Рљ.Р•','2001-03-24','+380965334788')
+insert into Client(Fam,Iniz,DateBirth,Phone) values('РЈР»СЊРЅРёРєРѕРІР°','Рњ.Р ','1979-09-27','+380971213245')
 go
 create table Payment
 (
@@ -53,8 +53,8 @@ create table TypeTransp
 	TypeTransp nvarchar(20) not null
 )
 go
-insert into TypeTransp(TypeTransp) values('Самолет')
-insert into TypeTransp(TypeTransp) values('Автобус')
+insert into TypeTransp(TypeTransp) values('РЎР°РјРѕР»РµС‚')
+insert into TypeTransp(TypeTransp) values('РђРІС‚РѕР±СѓСЃ')
 go
 create table Term
 (
@@ -78,22 +78,22 @@ create table Country
 	NameCountry nvarchar(30) not null
 )
 go
-insert into Country(NameCountry) values ('Украина')
-insert into Country(NameCountry) values ('Египет')
-insert into Country(NameCountry) values ('Турция')
-insert into Country(NameCountry) values ('Франция')
-insert into Country(NameCountry) values ('Испания')
-insert into Country(NameCountry) values ('Греция')
+insert into Country(NameCountry) values ('РЈРєСЂР°РёРЅР°')
+insert into Country(NameCountry) values ('Р•РіРёРїРµС‚')
+insert into Country(NameCountry) values ('РўСѓСЂС†РёСЏ')
+insert into Country(NameCountry) values ('Р¤СЂР°РЅС†РёСЏ')
+insert into Country(NameCountry) values ('РСЃРїР°РЅРёСЏ')
+insert into Country(NameCountry) values ('Р“СЂРµС†РёСЏ')
 go
 create table Food
 (
 	FoodID int not null identity(1,1) Primary key,
-	TypeFood nvarchar(30) not null default 'Все включено'
+	TypeFood nvarchar(30) not null default 'Р’СЃРµ РІРєР»СЋС‡РµРЅРѕ'
 )
 go
-insert into Food(TypeFood) values ('Только завтраки')
-insert into Food(TypeFood) values ('Завтрак и обед')
-insert into Food(TypeFood) values ('Все включено')
+insert into Food(TypeFood) values ('РўРѕР»СЊРєРѕ Р·Р°РІС‚СЂР°РєРё')
+insert into Food(TypeFood) values ('Р—Р°РІС‚СЂР°Рє Рё РѕР±РµРґ')
+insert into Food(TypeFood) values ('Р’СЃРµ РІРєР»СЋС‡РµРЅРѕ')
 go
 create table City
 (
@@ -103,19 +103,19 @@ create table City
 	Foreign key (CountryID) references Country(CountryID)
 )
 go
-insert into City(CountryID,NameCity) values (1,'Киев')
-insert into City(CountryID,NameCity) values (1,'Харьков')
-insert into City(CountryID,NameCity) values (1,'Днепр')
-insert into City(CountryID,NameCity) values (2,'Каир')
-insert into City(CountryID,NameCity) values (2,'Хургада')
-insert into City(CountryID,NameCity) values (3,'Аланья')
-insert into City(CountryID,NameCity) values (3,'Анталия')
-insert into City(CountryID,NameCity) values (4,'Париж')
-insert into City(CountryID,NameCity) values (4,'Лион')
-insert into City(CountryID,NameCity) values (5,'Валенсия')
-insert into City(CountryID,NameCity) values (5,'Мадрид')
-insert into City(CountryID,NameCity) values (6,'Афины')
-insert into City(CountryID,NameCity) values (5,'Ханья')
+insert into City(CountryID,NameCity) values (1,'РљРёРµРІ')
+insert into City(CountryID,NameCity) values (1,'РҐР°СЂСЊРєРѕРІ')
+insert into City(CountryID,NameCity) values (1,'Р”РЅРµРїСЂ')
+insert into City(CountryID,NameCity) values (2,'РљР°РёСЂ')
+insert into City(CountryID,NameCity) values (2,'РҐСѓСЂРіР°РґР°')
+insert into City(CountryID,NameCity) values (3,'РђР»Р°РЅСЊСЏ')
+insert into City(CountryID,NameCity) values (3,'РђРЅС‚Р°Р»РёСЏ')
+insert into City(CountryID,NameCity) values (4,'РџР°СЂРёР¶')
+insert into City(CountryID,NameCity) values (4,'Р›РёРѕРЅ')
+insert into City(CountryID,NameCity) values (5,'Р’Р°Р»РµРЅСЃРёСЏ')
+insert into City(CountryID,NameCity) values (5,'РњР°РґСЂРёРґ')
+insert into City(CountryID,NameCity) values (6,'РђС„РёРЅС‹')
+insert into City(CountryID,NameCity) values (5,'РҐР°РЅСЊСЏ')
 
 
 go
@@ -158,16 +158,16 @@ create table Tour
 	Foreign key (HotelID) references Hotel(HotelID)
 )
 go
-insert into Tour (TermID,HotelID,NameTour,Price) values (1,8,'Погулки по Парижу',45000)
-insert into Tour (TermID,HotelID,NameTour,Price) values (2,6,'Золотое кольцо Турции',20000)
-insert into Tour (TermID,HotelID,NameTour,Price) values (3,12,'Оздоровительный тур в Испанию',10000)
-insert into Tour (TermID,HotelID,NameTour,Price) values (4,13,'Незабываемый отдых для двоих в Греции',30000)
-insert into Tour (TermID,HotelID,NameTour,Price) values (5,15,'Отдых на острове в Греции',30000)
-insert into Tour (TermID,HotelID,NameTour,Price) values (6,1,'Екскурсии по Египту',9000)
-insert into Tour (TermID,HotelID,NameTour,Price) values (7,9,'Романтическая поездка в Лион',90000)
-insert into Tour (TermID,HotelID,NameTour,Price) values (8,4,'Отдых на берегу Турции',30000)
-insert into Tour (TermID,HotelID,NameTour,Price) values (7,3,'Расслабляющая поездка в Египет',57000)
-insert into Tour (TermID,HotelID,NameTour,Price) values (6,10,'Спортивная поездка в Испанию',15000)
+insert into Tour (TermID,HotelID,NameTour,Price) values (1,8,'РџРѕРіСѓР»РєРё РїРѕ РџР°СЂРёР¶Сѓ',45000)
+insert into Tour (TermID,HotelID,NameTour,Price) values (2,6,'Р—РѕР»РѕС‚РѕРµ РєРѕР»СЊС†Рѕ РўСѓСЂС†РёРё',20000)
+insert into Tour (TermID,HotelID,NameTour,Price) values (3,12,'РћР·РґРѕСЂРѕРІРёС‚РµР»СЊРЅС‹Р№ С‚СѓСЂ РІ РСЃРїР°РЅРёСЋ',10000)
+insert into Tour (TermID,HotelID,NameTour,Price) values (4,13,'РќРµР·Р°Р±С‹РІР°РµРјС‹Р№ РѕС‚РґС‹С… РґР»СЏ РґРІРѕРёС… РІ Р“СЂРµС†РёРё',30000)
+insert into Tour (TermID,HotelID,NameTour,Price) values (5,15,'РћС‚РґС‹С… РЅР° РѕСЃС‚СЂРѕРІРµ РІ Р“СЂРµС†РёРё',30000)
+insert into Tour (TermID,HotelID,NameTour,Price) values (6,1,'Р•РєСЃРєСѓСЂСЃРёРё РїРѕ Р•РіРёРїС‚Сѓ',9000)
+insert into Tour (TermID,HotelID,NameTour,Price) values (7,9,'Р РѕРјР°РЅС‚РёС‡РµСЃРєР°СЏ РїРѕРµР·РґРєР° РІ Р›РёРѕРЅ',90000)
+insert into Tour (TermID,HotelID,NameTour,Price) values (8,4,'РћС‚РґС‹С… РЅР° Р±РµСЂРµРіСѓ РўСѓСЂС†РёРё',30000)
+insert into Tour (TermID,HotelID,NameTour,Price) values (7,3,'Р Р°СЃСЃР»Р°Р±Р»СЏСЋС‰Р°СЏ РїРѕРµР·РґРєР° РІ Р•РіРёРїРµС‚',57000)
+insert into Tour (TermID,HotelID,NameTour,Price) values (6,10,'РЎРїРѕСЂС‚РёРІРЅР°СЏ РїРѕРµР·РґРєР° РІ РСЃРїР°РЅРёСЋ',15000)
 go
 create table Transp
 (

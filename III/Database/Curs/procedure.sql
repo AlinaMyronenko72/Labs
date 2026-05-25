@@ -8,7 +8,7 @@ on Term.TermID=Tour.TermID
 where DateStart between @date1 and @date2
 
 
-create procedure pricetour  @name nvarchar(50)='Ôğàíöèÿ',@min money output, @max money output,@count int output
+create procedure pricetour  @name nvarchar(50)='Ğ¤Ñ€Ğ°Ğ½Ñ†Ğ¸Ñ',@min money output, @max money output,@count int output
 as
 select @min=min(Price),@max=max(Price),@count=count(*)
 from Country inner join City

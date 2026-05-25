@@ -58,9 +58,9 @@ int main()
 	cout << "b:";
 	cin >> b;
 	double h = (b - a) / n;
-	cout << "İéëåğ" << endl;
+	cout << "Ğ­Ğ¹Ğ»ĞµÑ€" << endl;
 	Eiler(x, y, z, n, h);
-	cout << "İéëåğ-Êîøè" << endl;
+	cout << "Ğ­Ğ¹Ğ»ĞµÑ€-ĞšĞ¾ÑˆĞ¸" << endl;
 	EilerKoshi(x, y, z, n, h);
 	
 
