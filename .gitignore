@@ -24,4 +24,8 @@ out/
 *.avi
 *.mov
 
+*.zip
+*.rar
+*.7z
+*.tar.gz
 
